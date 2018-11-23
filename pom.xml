@@ -278,4 +278,3 @@
         <connection>scm:git:https://github.com/Appdynamics/haproxy-monitoring-extension.git</connection>
     </scm>
 </project>
-
