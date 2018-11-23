@@ -13,7 +13,7 @@ object EXT_HAProxyMonitoringExtension_CleanBuild : BuildType({
     name = "CleanBuild"
 
     vcs {
-        root(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HAProxyMonitoringExtension)
+        root(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension)
     }
 
     steps {

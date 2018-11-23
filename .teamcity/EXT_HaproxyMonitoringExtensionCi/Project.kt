@@ -15,7 +15,7 @@ object Project : Project({
     parentId = "EXT"
     name = "Haproxy Monitoring Extension Ci"
 
-    vcsRoot(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HAProxyMonitoringExtension)
+    vcsRoot(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension)
 
     buildType(EXT_HAProxyMonitoringExtension_CleanBuild)
     buildType(EXT_HAProxyMonitoringExtension_SetupInLinux)
