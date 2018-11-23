@@ -1,6 +1,5 @@
 package EXT_HaproxyMonitoringExtensionCi.vcsRoots
 
-import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.vcs.GitVcsRoot
 
 object EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension : GitVcsRoot({
@@ -8,8 +7,8 @@ object EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringEx
     id = "EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension"
     name = "https://github.com/satish-m/haproxy-monitoring-extension-ci#refs/heads/master"
     url = "https://github.com/satish-m/haproxy-monitoring-extension-ci"
-    authMethod = password {
-        userName = "satish-m"
-        password = "credentialsJSON:0c8cf62d-6a9f-4b6c-8d02-f58defe307b3"
+    authMethod = uploadedKey {
+        uploadedKey = "ssh-github"
+        passphrase = "credentialsJSON:34a47f56-af6b-4133-85c0-70ad8057f7f2"
     }
 })

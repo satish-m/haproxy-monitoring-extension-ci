@@ -1,4 +1,4 @@
-package EXT_ApacheMonitoringExtension.buildTypes
+package EXT_HaproxyMonitoringExtensionCi.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.exec
@@ -13,8 +13,7 @@ object EXT_HAProxyMonitoringExtension_StopLinux : BuildType({
     name = "Stop Linux docker"
 
     vcs {
-        root(EXT_HAProxyMonitoringExtension.vcsRoots.EXT_HAProxyMonitoringExtension)
-
+        root(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension)
     }
 
     steps {

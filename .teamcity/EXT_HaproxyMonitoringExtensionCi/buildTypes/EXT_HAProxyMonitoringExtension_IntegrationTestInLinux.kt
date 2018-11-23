@@ -1,4 +1,4 @@
-package EXT_ApacheMonitoringExtension.buildTypes
+package EXT_HaproxyMonitoringExtensionCi.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.BuildType
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.maven
@@ -13,7 +13,7 @@ object EXT_HAProxyMonitoringExtension_IntegrationTestInLinux : BuildType({
     name = "IntegrationTest in Linux"
 
     vcs {
-        root(EXT_HAProxyMonitoringExtension.vcsRoots.EXT_HAProxyMonitoringExtension)
+        root(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension)
 
     }
 

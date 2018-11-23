@@ -1,6 +1,7 @@
-package EXT_HAProxyMonitoringExtension
+package EXT_HaproxyMonitoringExtensionCi
 
-import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.project
+import jetbrains.buildServer.configs.kotlin.v2017_2.version
 
 /*
 The settings script is an entry point for defining a single
@@ -32,4 +33,4 @@ the 'Debug' option is available in the context menu for the task.
 */
 
 version = "2017.2"
-project(EXT_HAProxyMonitoringExtension.Project)
+project(EXT_HaproxyMonitoringExtensionCi.Project)
