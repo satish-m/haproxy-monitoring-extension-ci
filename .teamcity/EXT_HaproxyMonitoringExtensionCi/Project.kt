@@ -4,7 +4,7 @@ import EXT_HaproxyMonitoringExtensionCi.buildTypes.EXT_HAProxyMonitoringExtensio
 import EXT_HaproxyMonitoringExtensionCi.buildTypes.EXT_HAProxyMonitoringExtension_IntegrationTestInLinux
 import EXT_HaproxyMonitoringExtensionCi.buildTypes.EXT_HAProxyMonitoringExtension_SetupInLinux
 import EXT_HaproxyMonitoringExtensionCi.buildTypes.EXT_HAProxyMonitoringExtension_StopLinux
-import EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension
+import EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HAProxyMonitoringExtension
 import jetbrains.buildServer.configs.kotlin.v2017_2.Project
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.VersionedSettings
 import jetbrains.buildServer.configs.kotlin.v2017_2.projectFeatures.versionedSettings
@@ -15,7 +15,7 @@ object Project : Project({
     parentId = "EXT"
     name = "Haproxy Monitoring Extension Ci"
 
-    vcsRoot(EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension)
+    vcsRoot(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HAProxyMonitoringExtension)
 
     buildType(EXT_HAProxyMonitoringExtension_CleanBuild)
     buildType(EXT_HAProxyMonitoringExtension_SetupInLinux)
@@ -27,7 +27,7 @@ object Project : Project({
             id = "PROJECT_EXT_9"
             mode = VersionedSettings.Mode.ENABLED
             buildSettingsMode = VersionedSettings.BuildSettingsMode.PREFER_SETTINGS_FROM_VCS
-            rootExtId = EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension.id
+            rootExtId = EXT_HAProxyMonitoringExtension.id
             showChanges = false
             settingsFormat = VersionedSettings.Format.KOTLIN
             storeSecureParamsOutsideOfVcs = true

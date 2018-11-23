@@ -13,7 +13,7 @@ object EXT_HAProxyMonitoringExtension_IntegrationTestInLinux : BuildType({
     name = "IntegrationTest in Linux"
 
     vcs {
-        root(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HaproxyMonitoringExtensionCi_HttpsGithubComSatishMHaproxyMonitoringExtension)
+        root(EXT_HaproxyMonitoringExtensionCi.vcsRoots.EXT_HAProxyMonitoringExtension)
 
     }
 
