@@ -1,5 +1,9 @@
 package EXT_HAProxyMonitoringExtension
 
+import EXT_HAProxyMonitoringExtension.buildTypes.EXT_HAProxyMonitoringExtension_CleanBuild
+import EXT_HAProxyMonitoringExtension.buildTypes.EXT_HAProxyMonitoringExtension_IntegrationTestInLinux
+import EXT_HAProxyMonitoringExtension.buildTypes.EXT_HAProxyMonitoringExtension_SetupInLinux
+import EXT_HAProxyMonitoringExtension.buildTypes.EXT_HAProxyMonitoringExtension_StopLinux
 import EXT_HAProxyMonitoringExtension.vcsRoots.*
 import EXT_HAProxyMonitoringExtension.vcsRoots.EXT_HAProxyMonitoringExtension_HAProxy
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
@@ -15,6 +19,11 @@ object Project : Project({
 
     vcsRoot(EXT_HAProxyMonitoringExtension_HAProxy)
 
+    buildType(EXT_HAProxyMonitoringExtension_CleanBuild)
+    buildType(EXT_HAProxyMonitoringExtension_SetupInLinux)
+    buildType(EXT_HAProxyMonitoringExtension_IntegrationTestInLinux)
+    buildType(EXT_HAProxyMonitoringExtension_StopLinux)
+
     features {
         versionedSettings {
             id = "PROJECT_EXT_10"
@@ -26,4 +35,12 @@ object Project : Project({
             storeSecureParamsOutsideOfVcs = true
         }
     }
+
+    buildTypesOrder = arrayListOf(
+            EXT_HAProxyMonitoringExtension_CleanBuild,
+            EXT_HAProxyMonitoringExtension_SetupInLinux,
+            EXT_HAProxyMonitoringExtension_IntegrationTestInLinux,
+            EXT_HAProxyMonitoringExtension_StopLinux
+    )
+
 })
