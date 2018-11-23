@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright 2014. AppDynamics LLC and its affiliates.
+  ~  * All Rights Reserved.
+  ~  * This is unpublished proprietary source code of AppDynamics LLC and its affiliates.
+  ~  * The copyright notice above does not evidence any actual or intended publication of such source code.
+  -->
+
+<monitor>
+    <name>HAProxyMonitor</name>
+    <type>managed</type>
+    <description>HAProxy Monitor</description>
+    <monitor-configuration></monitor-configuration>
+    <monitor-run-task>
+        <execution-style>periodic</execution-style>
+        <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+        <name>HAProxy Monitor Run Task</name>
+        <display-name>HAProxy Monitor Task</display-name>
+        <description>HAProxy Monitor Task</description>
+        <type>java</type>
+        <execution-timeout-in-secs>60</execution-timeout-in-secs>
+        <task-arguments>
+            <argument name="config-file" is-required="true" default-value="monitors/HAProxyMonitor/config.yml" />
+            <argument name="metric-file" is-required="true" default-value="monitors/HAProxyMonitor/metrics.xml" />
+        </task-arguments>
+        <java-task>
+            <classpath>haproxy-monitoring-extension.jar</classpath>
+            <impl-class>com.appdynamics.extensions.haproxy.HAProxyMonitor</impl-class>
+        </java-task>
+    </monitor-run-task>
+</monitor>

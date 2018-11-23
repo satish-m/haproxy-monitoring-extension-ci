@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  machine:
+#    image: appdynamics/machine:4.4
+    environment:
+     - APPDYNAMICS_AGENT_ACCOUNT_NAME=customer1
+     - APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY
+     - APPDYNAMICS_CONTROLLER_HOST_NAME=192.168.1.9
+     - APPDYNAMICS_CONTROLLER_SSL_ENABLED=false
+     - APPDYNAMICS_CONTROLLER_PORT=8090
+     - MACHINE_AGENT_PROPERTIES=-Dappdynamics.sim.enabled=true -Dappdynamics.docker.enabled=true
+     - HAPROXY_HOST=demo.1wt.eu
+     - HAPROXY_POST=80
+     - HAPROXY_CSV_URI=;csv
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /:/hostroot:ro
+      - /var/run/docker.sock:/var/run/docker.sock
